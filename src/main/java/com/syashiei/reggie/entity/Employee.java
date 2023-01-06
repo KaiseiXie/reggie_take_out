@@ -1,4 +1,4 @@
-package com.itheima.reggie.entity;
+package com.syashiei.reggie.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -6,6 +6,9 @@ import lombok.Data;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+/**
+ * 社員インスタンス
+ * **/
 @Data
 public class Employee implements Serializable {
 
@@ -23,7 +26,7 @@ public class Employee implements Serializable {
 
     private String sex;
 
-    private String idNumber;
+    private String idNumber;//マイナンバーカード
 
     private Integer status;
 

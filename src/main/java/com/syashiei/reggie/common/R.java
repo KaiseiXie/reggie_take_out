@@ -1,4 +1,4 @@
-package com.itheima.reggie.common;
+package com.syashiei.reggie.common;
 
 import lombok.Data;
 import java.util.HashMap;
@@ -6,6 +6,10 @@ import java.util.Map;
 
 @Data
 public class R<T> {
+
+    /**
+     * 通用返回结果类
+     * **/
 
     private Integer code; //编码：1成功，0和其它数字为失败
 
