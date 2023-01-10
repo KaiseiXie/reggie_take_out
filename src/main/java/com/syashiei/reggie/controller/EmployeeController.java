@@ -85,15 +85,15 @@ public class EmployeeController {
         //设置md5加密的密码
         employee.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
 
+        /*employee.setUpdateTime(LocalDateTime.now());
         employee.setCreateTime(LocalDateTime.now());
-        employee.setUpdateTime(LocalDateTime.now());
 
         //获得当前用户的id
         Long empId = (Long) request.getSession().getAttribute("employee");
 
         employee.setCreateUser(empId);
         employee.setUpdateUser(empId);
-
+*/
         employeeService.save(employee);
 
         return R.success("新增员工成功");
@@ -116,6 +116,38 @@ public class EmployeeController {
         //执行查询
         employeeService.page(pageInfo,queryWrapper);
         return R.success(pageInfo);
+    }
+
+    /**
+     * 根据状态修改员工信息
+     * @param employee
+     * @return
+     */
+    @PutMapping
+    public R<String> update(HttpServletRequest request,@RequestBody Employee employee){
+        log.info(employee.toString());
+
+        Long empId = (Long) request.getSession().getAttribute("employee");
+        employee.setUpdateTime(LocalDateTime.now());
+        employee.setUpdateUser(empId);
+        employeeService.updateById(employee);
+
+        return R.success("员工信息修改成功");
+    }
+
+    /**
+     * 根据id查询员工信息
+     * @param id
+     * @return
+     */
+    @GetMapping("/{id}")
+    public R<Employee> getById(@PathVariable Long id){
+        log.info("根据id查询员工信息");
+        Employee employee = employeeService.getById(id);
+        if (employee != null){
+            return R.success(employee);
+        }
+        return R.error("没有查询到对应员工信息");
     }
 }
 
