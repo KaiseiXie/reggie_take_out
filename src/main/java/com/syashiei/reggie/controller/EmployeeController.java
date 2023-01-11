@@ -2,11 +2,13 @@ package com.syashiei.reggie.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.syashiei.reggie.common.MyMetaObjectHandler;
 import com.syashiei.reggie.common.R;
 import com.syashiei.reggie.entity.Employee;
 import com.syashiei.reggie.service.EmployeeService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
+import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
@@ -93,7 +95,7 @@ public class EmployeeController {
 
         employee.setCreateUser(empId);
         employee.setUpdateUser(empId);
-*/
+        */
         employeeService.save(employee);
 
         return R.success("新增员工成功");
@@ -150,4 +152,3 @@ public class EmployeeController {
         return R.error("没有查询到对应员工信息");
     }
 }
-

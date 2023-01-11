@@ -56,6 +56,7 @@ public class LoginCheckFilter implements Filter {
 
             Long empId = (Long) httpServletRequest.getSession().getAttribute("employee");
             BaseContext.setCurrentId(empId);
+            log.info("catch empId = {}",empId);
 
             chain.doFilter(httpServletRequest,httpServletResponse);
             return;

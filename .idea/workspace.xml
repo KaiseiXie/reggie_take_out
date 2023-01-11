@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c73c0e5-3c9b-4747-ab97-409d8e01be95" name="Changes" comment="second commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/common/BaseContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/common/JacksonObjectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/common/MyMetaObjectHandler.java" afterDir="false" />
+    <list default="true" id="9c73c0e5-3c9b-4747-ab97-409d8e01be95" name="Changes" comment="3 commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/mapper/CategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/service/impl/CategoryServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/common/BaseContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/common/BaseContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/common/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/common/MyMetaObjectHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/entity/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/filter/LoginCheckFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/mapper/EmployeeMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +52,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/syashiei/project/reggie_take_out/src/main/java/com/syashiei/reggie/common",
+    "last_opened_file_path": "C:/syashiei/javaweb/AttendanceDemo",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -58,8 +62,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\syashiei\project\reggie_take_out\src\main\java\com\syashiei\reggie\common" />
       <recent name="C:\syashiei\project\reggie_take_out\src\main\java\com\syashiei\reggie\entity" />
+      <recent name="C:\syashiei\project\reggie_take_out\src\main\java\com\syashiei\reggie\common" />
       <recent name="C:\syashiei\project\reggie_take_out\src\main\resources" />
     </key>
   </component>
@@ -94,7 +98,8 @@
       <workItem from="1672877448516" duration="4168000" />
       <workItem from="1672882599603" duration="21196000" />
       <workItem from="1672963284117" duration="26707000" />
-      <workItem from="1673311172426" duration="26150000" />
+      <workItem from="1673311172426" duration="26203000" />
+      <workItem from="1673395718629" duration="26781000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1672992855352</created>
@@ -103,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672992855352</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="3 commit">
+      <created>1673341998834</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673341998834</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,22 +135,43 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+    <MESSAGE value="3 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/syashiei/reggie/controller/EmployeeController.java</url>
-          <line>82</line>
+          <line>84</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/syashiei/reggie/common/MyMetaObjectHandler.java</url>
-          <line>19</line>
+          <line>18</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.23/mysql-connector-java-8.0.23.jar!/com/mysql/cj/jdbc/ClientPreparedStatement.class</url>
+          <line>715</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/syashiei/reggie/entity/Category.java</url>
+          <line>47</line>
+          <properties field="createUser" class="com.syashiei.reggie.entity.Category" />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.apache.ibatis.reflection.ReflectionException" package="org.apache.ibatis.reflection" />
+          <option name="timeStamp" value="25" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="((SQLSyntaxErrorException)((SQLSyntaxErrorException)SQLSyntaxErrorException7519_DebugLabel).cause).cause" custom="java.sql.SQLSyntaxErrorException" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
