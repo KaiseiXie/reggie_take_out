@@ -26,8 +26,10 @@ public class CategoryController {
      */
     @PostMapping
     public R<String> save(@RequestBody Category category){
-        log.info("category:{},category");
+        log.info("新增分类：{}",category);
+
         categoryService.save(category);
+
         return R.success("新增分类成功");
     }
 
@@ -40,7 +42,6 @@ public class CategoryController {
 
         //获取分页构造器
         Page<Category> pageInfo = new Page<>(page,pageSize);
-
         //构造条件构造器
         LambdaQueryWrapper<Category> queryWrapper = new LambdaQueryWrapper<>();
         //获得排序条件
@@ -54,14 +55,29 @@ public class CategoryController {
 
     /**
      * 删除特定分类
+     * @param ids
      * @return
      */
     @DeleteMapping
-    public R<String> delete(Long id){
-        log.info("删除id为{}的分类",id);
+    public R<String> delete(Long ids){
+        log.info("删除id为{}的分类",ids);
 
-        categoryService.removeById(id);
+        categoryService.remove(ids);
+
         return  R.success("删除成功");
     }
 
+    /**
+     * 修改分类信息
+     * @param category
+     * @return
+     */
+    @PutMapping
+    public R<String> update(@RequestBody Category category){
+        log.info("修改分类:{}",category);
+
+        categoryService.updateById(category);
+
+        return R.success("修改分类信息成功");
+    }
 }
