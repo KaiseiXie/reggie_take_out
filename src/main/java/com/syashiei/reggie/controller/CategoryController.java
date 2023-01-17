@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * 分类管理
  */
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/category")
 @Slf4j
 public class CategoryController {
+
     @Autowired
     private CategoryService categoryService;
 
@@ -34,7 +37,10 @@ public class CategoryController {
     }
 
     /**
-     *取得排序后的查询结果
+     * 取得分页后的查询结果
+     * @param page
+     * @param pageSize
+     * @return
      */
     @GetMapping("/page")
     public R<Page> page(int page,int pageSize){
@@ -79,5 +85,24 @@ public class CategoryController {
         categoryService.updateById(category);
 
         return R.success("修改分类信息成功");
+    }
+
+    /**
+     * 根据条件查询分类
+     * @param category
+     * @return
+     */
+    @GetMapping("/list")
+    public R<List<Category>> list(Category category){
+        //构造条件构造器
+        LambdaQueryWrapper<Category> queryWrapper = new LambdaQueryWrapper<>();
+        //添加条件
+        queryWrapper.eq(category.getType() != null,Category::getType,category.getType());
+        //获得排序条件
+        queryWrapper.orderByAsc(Category::getSort).orderByDesc(Category::getType);
+
+        //获取list列表
+        List<Category> list = categoryService.list(queryWrapper);
+        return R.success(list);
     }
 }

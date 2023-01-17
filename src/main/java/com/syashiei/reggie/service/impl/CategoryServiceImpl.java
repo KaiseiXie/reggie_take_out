@@ -1,28 +1,26 @@
 package com.syashiei.reggie.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.syashiei.reggie.Exc.CustomException;
 import com.syashiei.reggie.entity.Category;
 import com.syashiei.reggie.entity.Dish;
 import com.syashiei.reggie.entity.Setmeal;
 import com.syashiei.reggie.mapper.CategoryMapper;
-import com.syashiei.reggie.mapper.DishMapper;
 import com.syashiei.reggie.service.CategoryService;
+import com.syashiei.reggie.service.DishService;
+import com.syashiei.reggie.service.SetmealService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Set;
 
 @Service
 public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> implements CategoryService{
 
     @Autowired
-    private DishServiceImpl dishService;
+    private DishService dishService;
 
-    private SetmealServiceImpl setmealService;
+    private SetmealService setmealService;
     /**
      * 根据id删除分类
      * @param id

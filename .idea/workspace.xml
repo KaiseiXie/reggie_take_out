@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c73c0e5-3c9b-4747-ab97-409d8e01be95" name="Changes" comment="5 commit">
+    <list default="true" id="9c73c0e5-3c9b-4747-ab97-409d8e01be95" name="Changes" comment="６ commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/controller/DishController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/dto/DishDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/entity/DishFlavor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/mapper/DishFlavorMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/service/DishFlavorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/service/impl/DishFavorServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/ReggieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/ReggieApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/common/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/common/MyMetaObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/controller/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/controller/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/controller/CommonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/filter/LoginCheckFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/service/DishService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syashiei/reggie/service/impl/DishServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/syashiei/OpenSourceProject/olympic",
+    "last_opened_file_path": "C:/syashiei/project/reggie_take_out",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -54,8 +67,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\syashiei\project\reggie_take_out\src\main\resources\backend\page\demo" />
+      <recent name="C:\syashiei\project\reggie_take_out\src\main\java\com\syashiei\reggie\dto" />
       <recent name="C:\syashiei\project\reggie_take_out\src\main\java\com\syashiei\reggie\entity" />
+      <recent name="C:\syashiei\project\reggie_take_out\src\main\resources\backend\page\demo" />
       <recent name="C:\syashiei\project\reggie_take_out\src\main\java\com\syashiei\reggie\common" />
       <recent name="C:\syashiei\project\reggie_take_out\src\main\resources" />
     </key>
@@ -97,7 +111,9 @@
       <workItem from="1673311172426" duration="26203000" />
       <workItem from="1673395718629" duration="26868000" />
       <workItem from="1673481403912" duration="25182000" />
-      <workItem from="1673568043236" duration="21490000" />
+      <workItem from="1673568043236" duration="21554000" />
+      <workItem from="1673826998677" duration="22995000" />
+      <workItem from="1673913927003" duration="26375000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1672992855352</created>
@@ -127,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673514150303</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="６ commit">
+      <created>1673600698430</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673600698430</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +173,8 @@
     <MESSAGE value="3 commit" />
     <MESSAGE value="4 commit" />
     <MESSAGE value="5 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="5 commit" />
+    <MESSAGE value="６ commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="６ commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -169,6 +193,11 @@
           <url>file://$USER_HOME$/AppData/Local/Temp/Temp1_reggie_take_out.zip/reggie_take_out/src/main/java/com/itheima/reggie/controller/CommonController.java</url>
           <line>81</line>
           <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/syashiei/reggie/service/impl/DishServiceImpl.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="org.apache.ibatis.reflection.ReflectionException" package="org.apache.ibatis.reflection" />

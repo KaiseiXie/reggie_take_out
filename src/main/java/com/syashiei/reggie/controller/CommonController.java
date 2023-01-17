@@ -66,7 +66,7 @@ public class CommonController {
             //创建输入流，通过输入流读取文件
             FileInputStream fileInputStream = new FileInputStream(new File(basePath + name));
 
-            //创建输出流，像浏览器输出文件
+            //创建输出流，向浏览器输出文件
             response.setContentType("image/jpeg");//设置返回文件类型
 
             ServletOutputStream outputStream = response.getOutputStream();

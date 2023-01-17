@@ -19,4 +19,4 @@ mybatis-plus:
       id-type: ASSIGN_ID
 
 reggie:
-  path: C:\img\
+  path: C:\syashiei\project\reggie_take_out\src\main\resources\backend\images\dishpic\
