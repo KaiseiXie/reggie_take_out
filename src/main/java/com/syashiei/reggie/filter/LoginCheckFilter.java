@@ -38,7 +38,9 @@ public class LoginCheckFilter implements Filter {
                 "/employee/logout",
                 "/backend/**",
                 "/front/**",
-                "/common/**"
+                "/common/**",
+                "/user/sendMsg",
+                "/user/login"
         };
 
         //2.判断本次请求是否需要处理
@@ -51,13 +53,24 @@ public class LoginCheckFilter implements Filter {
             return;
         }
 
-        //4.判断登录状态，如果已经登录则放行
+        //4-1.判断登录状态，如果已经登录则放行
         if (httpServletRequest.getSession().getAttribute("employee") != null){
             log.info("用户已登录，用户id为：{}",httpServletRequest.getSession().getAttribute("employee"));
 
             Long empId = (Long) httpServletRequest.getSession().getAttribute("employee");
             BaseContext.setCurrentId(empId);
             log.info("catch empId = {}",empId);
+
+            chain.doFilter(httpServletRequest,httpServletResponse);
+            return;
+        }
+
+        //4-2、判断登录状态，如果已登录，则直接放行
+        if(httpServletRequest.getSession().getAttribute("user") != null){
+            log.info("用户已登录，用户id为：{}",httpServletRequest.getSession().getAttribute("user"));
+
+            Long userId = (Long) httpServletRequest.getSession().getAttribute("user");
+            BaseContext.setCurrentId(userId);
 
             chain.doFilter(httpServletRequest,httpServletResponse);
             return;

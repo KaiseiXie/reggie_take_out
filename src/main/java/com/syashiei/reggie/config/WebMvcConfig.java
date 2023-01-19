@@ -23,7 +23,7 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
         log.info("开始进行静态资源调试...");
         registry.addResourceHandler("/backend/**").addResourceLocations("classpath:/backend/");
-        registry.addResourceHandler("/font/**").addResourceLocations("classpath:/font/");
+        registry.addResourceHandler("/front/**").addResourceLocations("classpath:/front/");
     }
 
     @Override
